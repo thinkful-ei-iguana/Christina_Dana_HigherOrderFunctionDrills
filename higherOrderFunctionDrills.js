@@ -4,9 +4,23 @@ function repeat(fn, n) {
 let hello = function (){console.log('Hello World.');}
 let goodbye = function (){console.log('Goodbye World.');}
 
-function filter() {
+function filter(arr, fn) {
+  let newArray = [];
+  for(let i = 0; i < arr.length; i++){
+    const currentElement = arr[i];
+   if (fn(currentElement)){
+    newArray.push(currentElement);
+
+   } 
+   
+  }
+  return newArray;
+
+
+
     // TASK: Define your function here
 }
+console.log
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
