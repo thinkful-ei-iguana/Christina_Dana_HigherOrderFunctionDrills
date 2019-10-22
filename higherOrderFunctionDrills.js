@@ -38,7 +38,31 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 
+function hazardWarningCreator (typeOfWarning){
+  let warningCounter = 0;
+  return function (location){
+      warningCounter++;
+      console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!
+      The ${typeOfWarning} hazard alert has triggered ${warningCounter} time${warningCounter>1?'s':''} today!`);
+  }
 
+}
+
+const rocksWarning = hazardWarningCreator('rocks Warning');
+rocksWarning('All of California');
+rocksWarning('Wisconsin');
+rocksWarning('Bundy Ave');
+rocksWarning('Great Lakes Area');
+
+const cuddlyCatsWarning = hazardWarningCreator('careful, cuddle pile ahead');
+cuddlyCatsWarning('All of California');
+cuddlyCatsWarning('Catalina Island');
+cuddlyCatsWarning('Cat Cafe');
+
+const sithLordWarning = hazardWarningCreator('I find your lack of faith Unnerving.');
+sithLordWarning('On dah Bridge');
+sithLordWarning('On Tatooine');
+sithLordWarning('In dah pawty bus');
 
 repeat(hello,5);
 repeat(goodbye,5);
