@@ -74,8 +74,10 @@ movements.filter(movement => movement[0] >= 0 && movement[1] >= 0);
 
 let steps = movements.map(movement => Math.abs(movement[0]) + Math.abs(movement[1]));
 
+
 steps.forEach(step => { 
   console.log(step);
 }
 );
 
+console.log('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'.split(' ').reduce((acc,curr)=> curr.length===3? acc+' ' :acc+curr[curr.length-1].toUpperCase(),''));
