@@ -66,3 +66,16 @@ sithLordWarning('In dah pawty bus');
 
 repeat(hello,5);
 repeat(goodbye,5);
+
+
+let movements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+movements.filter(movement => movement[0] >= 0 && movement[1] >= 0);
+
+let steps = movements.map(movement => Math.abs(movement[0]) + Math.abs(movement[1]));
+
+steps.forEach(step => { 
+  console.log(step);
+}
+);
+
